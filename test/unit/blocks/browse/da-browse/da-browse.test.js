@@ -47,7 +47,7 @@ describe('Browse', () => {
       expect(daBrowse._listItems[0].name).to.equal('d1');
 
       const copyCall = fetchedArgs.find(({ url }) => url.includes('/copy/'));
-      expect(copyCall.url).to.equal('https://admin.da.live/copy/myorg/mysite/myroot/srcdir/d1.html');
+      expect(copyCall.url).to.equal('https://admin.eumseds-da.live/copy/myorg/mysite/myroot/srcdir/d1.html');
       expect(copyCall.opts.body.get('destination')).to.equal('/myorg/mysite/myroot/destdir/d1.html');
       expect(copyCall.opts.method).to.equal('POST');
     } finally {
@@ -83,7 +83,7 @@ describe('Browse', () => {
       await daBrowse.loadMore();
 
       expect(fetchedArgs.length).to.equal(1);
-      expect(fetchedArgs[0].url).to.equal('https://admin.da.live/list/myorg/mysite/myroot/destdir');
+      expect(fetchedArgs[0].url).to.equal('https://admin.eumseds-da.live/list/myorg/mysite/myroot/destdir');
       expect(fetchedArgs[0].opts.headers['da-continuation-token']).to.equal('token-1');
     } finally {
       window.fetch = orgFetch;

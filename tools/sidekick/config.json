@@ -1,6 +1,6 @@
 {
   "project": "DA Live",
-  "host": "ent-da.live",
+  "host": "eumseds-da.live",
   "plugins": [
     {
       "id": "da-tags",

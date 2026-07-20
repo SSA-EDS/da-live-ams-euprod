@@ -7,7 +7,7 @@ import { getNx } from '../../../../scripts/utils.js';
 const { DA_ADMIN } = await import(`${getNx()}/utils/utils.js`);
 
 /**
- * @param {string} sourceUrl - e.g. https://admin.da.live/source/org/repo/path/doc.html
+ * @param {string} sourceUrl - e.g. https://admin.eumseds-da.live/source/org/repo/path/doc.html
  * @returns {{ origin: string, parent: string, name: string } | null}
  */
 export function getSourceUploadContext(sourceUrl) {

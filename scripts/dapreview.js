@@ -47,7 +47,7 @@ export default async function daPreview(loadPage) {
   }
 
   function initPort(e) {
-    if (e.origin !== 'https://ent-da.live'
+    if (e.origin !== 'https://eumseds-da.live'
       && e.origin !== 'http://localhost:3000'
       && e.origin !== 'https://localhost'
       && !e.origin.match(/^https:\/\/[a-z0-9-]+--da-live-ams-1128-west--ssa-eds\.eumseds\.(page|live)$/)

@@ -17,39 +17,39 @@ describe('DA Admin', () => {
   it('Sets DA admin default', () => {
     const env = getDaAdmin();
     // expect(env).to.equal('https://admin.da.live');
-    expect(env).to.equal('https://admin.ent-da.live');
+    expect(env).to.equal('https://admin.eumseds-da.live');
   });
 
   it('Sets DA admin stage', () => {
     const env = getDaAdmin({ href: 'http://localhost:3000/?da-admin=stage' });
     // expect(env).to.equal('https://stage-admin.da.live');
-    expect(env).to.equal('https://admin.ent-da.live');
+    expect(env).to.equal('https://admin.eumseds-da.live');
   });
 
   it('Gets cached DA admin stage', () => {
     const env = getDaAdmin();
     // expect(env).to.equal('https://stage-admin.da.live');
-    expect(env).to.equal('https://admin.ent-da.live');
+    expect(env).to.equal('https://admin.eumseds-da.live');
   });
 
   it('Resets DA admin', () => {
     const env = getDaAdmin({ href: 'http://localhost:3000/?da-admin=reset' });
     // expect(env).to.equal('https://admin.da.live');
-    expect(env).to.equal('https://admin.ent-da.live');
+    expect(env).to.equal('https://admin.eumseds-da.live');
   });
 });
 
 describe('Other origins', () => {
   it('Sets DA Origin', () => {
-    expect(DA_ORIGIN).to.equal('https://admin.ent-da.live');
+    expect(DA_ORIGIN).to.equal('https://admin.eumseds-da.live');
   });
 
   it('Sets Content Origin', () => {
-    expect(CON_ORIGIN).to.equal('https://content.ent-da.live');
+    expect(CON_ORIGIN).to.equal('https://content.eumseds-da.live');
   });
 
   it('Sets Live Preview Domain', () => {
-    expect(LIVE_PREVIEW_DOMAIN).to.equal('preview.ent-da.live');
+    expect(LIVE_PREVIEW_DOMAIN).to.equal('preview.eumseds-da.live');
   });
 
   it('Sets DA Etc Origin', () => {
@@ -63,7 +63,7 @@ describe('Other origins', () => {
 
 describe('DA Collab', () => {
   it('Gets DA Collab default', () => {
-    expect(COLLAB_ORIGIN).to.equal('wss://collab.ent-da.live');
+    expect(COLLAB_ORIGIN).to.equal('wss://collab.eumseds-da.live');
   });
 });
 
@@ -80,7 +80,7 @@ describe('SUPPORTED_FILES', () => {
 describe('getLivePreviewUrl', () => {
   it('Builds a https URL for the prod preview domain', () => {
     expect(getLivePreviewUrl('adobecom', 'da-bacom')).to.equal(
-      'https://main--da-bacom--adobecom.preview.ent-da.live',
+      'https://main--da-bacom--adobecom.preview.eumseds-da.live',
     );
   });
 });

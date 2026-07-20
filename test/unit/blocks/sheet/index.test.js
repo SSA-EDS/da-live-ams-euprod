@@ -146,7 +146,7 @@ describe('restoreVersion', () => {
     let saveBody;
     window.fetch = async (url, opts) => {
       const urlStr = String(url);
-      if (urlStr.startsWith('https://admin.hlx.page/ping')) {
+      if (urlStr.startsWith('https://admin.eumseds.page/ping')) {
         return new Response('', { status: 200, headers: new Headers() });
       }
       if (opts?.method === 'POST' && urlStr.includes('/source/')) {
@@ -187,7 +187,7 @@ describe('restoreVersion', () => {
   });
 });
 
-// getData takes pathDetails; source.get rebuilds the admin.da.live URL the mock serves.
+// getData takes pathDetails; source.get rebuilds the admin.eumseds-da.live URL the mock serves.
 const SOURCE_DETAILS = { org: 'org', site: 'site', path: '/file.json' };
 
 // The new api.js makes two requests: an hlx6 upgrade probe to admin.hlx.page/ping
@@ -195,10 +195,10 @@ const SOURCE_DETAILS = { org: 'org', site: 'site', path: '/file.json' };
 // x-api-upgrade-available header so the source URL stays on DA_ADMIN.
 function buildMockFetch(json) {
   return async (url) => {
-    if (url.startsWith('https://admin.hlx.page/ping')) {
+    if (url.startsWith('https://admin.eumseds.page/ping')) {
       return new Response('', { status: 200, headers: new Headers() });
     }
-    if (url.startsWith('https://admin.da.live/source/')) {
+    if (url.startsWith('https://admin.eumseds-da.live/source/')) {
       const headers = new Headers();
       headers.append('x-da-actions', '/=read,write');
       return new Response(json, { status: 200, headers });

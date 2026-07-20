@@ -374,7 +374,7 @@ export function getItemPreviewUrl(item, { org, site }) {
   if (hostname.includes('.aem.')) {
     const parts = hostname.split('.')[0].split('--').reverse();
     [itemOrg, itemSite] = parts;
-  } else if (hostname.includes('content.da.live')) {
+  } else if (hostname.includes('content.eumseds-da.live')) {
     const segments = pathname.slice(1).split('/');
     [itemOrg, itemSite] = segments;
     itemPath = `/${segments.slice(2).join('/')}`;

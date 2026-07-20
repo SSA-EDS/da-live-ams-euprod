@@ -10,7 +10,7 @@ const { saveSheets, handleSave, staleCheck } = await import('../../../../blocks/
 // stays on DA_ADMIN.
 function wrap(handler) {
   return async (url, opts) => {
-    if (typeof url === 'string' && url.startsWith('https://admin.hlx.page/ping')) {
+    if (typeof url === 'string' && url.startsWith('https://admin.eumseds.page/ping')) {
       return new Response('', { status: 200, headers: new Headers() });
     }
     return handler(url, opts);

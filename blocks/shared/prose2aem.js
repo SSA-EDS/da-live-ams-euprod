@@ -87,7 +87,7 @@ function makePictures(editor, live) {
     if (live && clone.src) {
       try {
         const source = new URL(clone.src);
-        if (source.host.endsWith('.da.live')) {
+        if (source.host.endsWith('.eumseds-da.live')) {
           source.pathname = `/${source.pathname
             .split('/')
             .slice(3) // remove org and site
@@ -296,8 +296,8 @@ export default function prose2aem(editor, livePreview, isFragment = false) {
   `;
 
   if (livePreview) {
-    html = html.replaceAll('https://content.da.live/', '/');
-    html = html.replaceAll('https://stage-content.da.live/', '/');
+    html = html.replaceAll('https://content.eumseds-da.live/', '/');
+    html = html.replaceAll('https://stage-content.eumseds-da.live/', '/');
   }
 
   return html;

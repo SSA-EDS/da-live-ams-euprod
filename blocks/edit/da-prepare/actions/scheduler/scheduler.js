@@ -4,7 +4,7 @@ import { initIms } from '../../../../shared/utils.js';
 import { saveToAem } from '../../../utils/helpers.js';
 import { isRegistered, getExistingSchedule, schedulePagePublish } from './utils.js';
 
-const REGISTER_PATH = 'https://da.live/apps/scheduler';
+const REGISTER_PATH = 'https://eumseds-da.live/apps/scheduler';
 
 const sheet = await getSheet(import.meta.url.replace('js', 'css'));
 

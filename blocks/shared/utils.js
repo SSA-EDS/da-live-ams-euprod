@@ -3,15 +3,15 @@ import { getNx, getNx2Api } from '../../scripts/utils.js';
 
 // const DA_ORIGINS = ['https://da.live', 'https://da.page', 'https://admin.da.live', 'https://admin.da.page', 'https://stage-admin.da.live', 'https://content.da.live', 'http://localhost:8787'];
 const DA_ORIGINS = [
-  'https://ent-da.live', // PROD
-  'https://ent-da.page', // PROD
-  'https://admin.ent-da.live', // PROD
-  'https://admin.ent-da.page', // PROD
-  'https://content.ent-da.live', // PROD
+  'https://eumseds-da.live', // PROD
+  'https://eumseds-da.page', // PROD
+  'https://admin.eumseds-da.live', // PROD
+  'https://admin.eumseds-da.page', // PROD
+  'https://content.eumseds-da.live', // PROD
   'http://localhost:8787'];
 
 const AEM_ORIGINS = ['https://admin.eumseds.page', 'https://admin.eumseds.live'];
-const ETC_ORIGINS = ['https://stage-content.da.live', 'https://helix-snapshot-scheduler-ci.adobeaem.workers.dev', 'https://helix-snapshot-scheduler-prod.adobeaem.workers.dev'];
+const ETC_ORIGINS = ['https://stage-content.eumseds-da.live', 'https://helix-snapshot-scheduler-ci.adobeaem.workers.dev', 'https://helix-snapshot-scheduler-prod.adobeaem.workers.dev'];
 const ALLOWED_TOKEN = [...DA_ORIGINS, ...AEM_ORIGINS, ...ETC_ORIGINS];
 
 let imsDetails;

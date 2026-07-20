@@ -1,6 +1,6 @@
 mountpoints:
   /:
-    url: https://content.eumseds-da.live.live/ssa-eds/da-live-ams-euprod/
+    url: https://content.eumseds-da.live/ssa-eds/da-live-ams-euprod/
     type: markup
 
 folders:

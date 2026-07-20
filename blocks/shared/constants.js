@@ -17,26 +17,26 @@ const DA_ADMIN_ENVS = {
   local: 'http://localhost:8787',
   // stage: 'https://stage-admin.da.live',
   // prod: 'https://admin.da.live',
-  stage: 'https://admin.ent-da.live',
-  prod: 'https://admin.ent-da.live',
+  stage: 'https://admin.eumseds-da.live',
+  prod: 'https://admin.eumseds-da.live',
 };
 
 const DA_COLLAB_ENVS = {
   local: 'ws://localhost:4711',
-  stage: 'wss://collab.ent-da.live',
-  prod: 'wss://collab.ent-da.live',
+  stage: 'wss://collab.eumseds-da.live',
+  prod: 'wss://collab.eumseds-da.live',
 };
 
 const DA_CONTENT_ENVS = {
   local: 'http://localhost:8788',
-  stage: 'https://stage-content.ent-da.live',
-  prod: 'https://content.ent-da.live',
+  stage: 'https://stage-content.eumseds-da.live',
+  prod: 'https://content.eumseds-da.live',
 };
 
 const DA_LIVE_PREVIEW_ENVS = {
   local: 'localhost:8000',
-  stage: 'stage-preview.ent-da.live',
-  prod: 'preview.ent-da.live',
+  stage: 'stage-preview.eumseds-da.live',
+  prod: 'preview.eumseds-da.live',
 };
 
 const DA_ETC_ENVS = {
@@ -53,7 +53,7 @@ function getDaEnv(location, key, envs) {
     localStorage.setItem(key, query);
   }
   const env = envs[localStorage.getItem(key) || 'prod'];
-  return location.origin === 'https://ent-da.page' ? env.replace('.live', '.page') : env;
+  return location.origin === 'https://eumseds-da.page' ? env.replace('.live', '.page') : env;
 }
 
 export const getDaAdmin = (() => {

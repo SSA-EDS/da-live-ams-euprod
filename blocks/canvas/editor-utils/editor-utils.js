@@ -312,8 +312,8 @@ export function updateCursors(ctx) {
 export function getPreviewOrigin(org, repo, branch = 'main') {
   const hostname = window?.location?.hostname ?? '';
   const domain = hostname.endsWith('aem.page') || hostname.endsWith('localhost')
-    ? 'stage-preview.da.live'
-    : 'preview.da.live';
+    ? 'stage-preview.eumseds-da.live'
+    : 'preview.eumseds-da.live';
   return `https://${branch}--${repo}--${org}.${domain}`;
 }
 

@@ -193,7 +193,7 @@ describe('DaNew', () => {
       // source.save's daFetch does not catch the raw throw, so it surfaces here.
       expect(caught).to.equal(NAV_SENTINEL);
       expect(fetchCalls).to.have.length(1);
-      expect(fetchCalls[0].url).to.equal('https://admin.da.live/source/org/repo/my-doc.html');
+      expect(fetchCalls[0].url).to.equal('https://admin.eumseds-da.live/source/org/repo/my-doc.html');
       expect(fetchCalls[0].method).to.equal('POST');
       expect(fetchCalls[0].bodyText).to.equal(
         '<body><header></header><main><div></div></main><footer></footer></body>',

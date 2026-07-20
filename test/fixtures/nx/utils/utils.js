@@ -4,4 +4,4 @@ export const loadStyle = async () => {
   return sheet;
 };
 
-export const DA_ADMIN = 'https://admin.da.live';
+export const DA_ADMIN = 'https://admin.eumseds-da.live';

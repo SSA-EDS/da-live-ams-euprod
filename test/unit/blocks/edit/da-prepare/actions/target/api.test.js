@@ -34,7 +34,7 @@ describe('target/api', () => {
       const body = JSON.parse(captured.opts.body);
       expect(body.name).to.equal('My Offer');
       expect(body.marketingCloudMetadata.editURL).to.equal(
-        'https://da.live/edit#/org/repo/path',
+        'https://eumseds-da.live/edit#/org/repo/path',
       );
       expect(body.marketingCloudMetadata['aem.lastUpdatedBy']).to.equal('Joe');
     });

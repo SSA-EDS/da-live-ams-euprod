@@ -45,7 +45,7 @@ function setupBlockOptions(library) {
   if (blockJsonUrl) fetchKeyAutocompleteData(blockJsonUrl);
 }
 
-const AEM_CONTENT_HOST = /\.(ent-)?(aem|hlx)\.(page|live)$/;
+const AEM_CONTENT_HOST = /\.(ent-)?(aem|hlx|eumseds)\.(page|live)$/;
 
 export function aemToContentUrl(url) {
   try {
@@ -233,11 +233,11 @@ export function getPreviewUrl(previewUrl) {
     const url = new URL(previewUrl);
 
     if (url.origin.includes('--')) return url.href;
-    if (url.origin.includes('content.ent-da.live')) {
+    if (url.origin.includes('content.eumseds-da.live')) {
       const [, org, site, ...split] = url.pathname.split('/');
       return `https://${ref}--${site}--${org}.eumseds.page/${split.join('/')}`;
     }
-    if (url.origin.includes('admin.ent-da.live')) {
+    if (url.origin.includes('admin.eumseds-da.live')) {
       const [, , org, site, ...split] = url.pathname.split('/');
       return `https://${ref}--${site}--${org}.eumseds.page/${split.join('/')}`;
     }
@@ -256,11 +256,11 @@ export function getAemUrlVars(url) {
       return [org, site, branch];
     }
 
-    if (urlObj.origin.includes('content.ent-da.live')) {
+    if (urlObj.origin.includes('content.eumseds-da.live')) {
       const [, org, site] = urlObj.pathname.split('/');
       return [org, site, 'main'];
     }
-    if (urlObj.origin.includes('admin.ent-da.live')) {
+    if (urlObj.origin.includes('admin.eumseds-da.live')) {
       const [, , org, site] = urlObj.pathname.split('/');
       return [org, site, 'main'];
     }
@@ -286,12 +286,12 @@ export function getItemDetails(item) {
   const { hostname, pathname } = url;
 
   // AEM Flavor
-  if (hostname.includes('.aem.')) {
+  if (hostname.includes('.eumseds.')) {
     const [org, site] = hostname.split('.')[0].split('--').reverse();
     return { org, site, pathname };
   }
   // DA Content Flavor
-  if (hostname.includes('content.ent-da.live') || hostname.includes('content.da.live')) {
+  if (hostname.includes('content.eumseds-da.live')) {
     const [org, site, ...rest] = pathname.slice(1).split('/');
     return { org, site, pathname: `/${rest.join('/')}` };
   }
