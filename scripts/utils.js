@@ -75,7 +75,7 @@ export const [setNx, getNx] = (() => {
         if (branch === 'local') return `http://localhost:6456${nxVerBase}`;
 
         // Otherwise use a fully qualified branch
-        return `https://${branch}--da-nx-ams-1128-west--ssa-eds.eumseds.live${nxVerBase}`;
+        return `https://${branch}--da-nx-ams-euprod--ssa-eds.eumseds.live${nxVerBase}`;
       })();
       return nx;
     }, () => nx,
