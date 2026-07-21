@@ -5,5 +5,3 @@ mountpoints:
 
 folders:
   /app/: /apps/custom/shell
-
-  # comment
